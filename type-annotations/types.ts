@@ -20,4 +20,43 @@ let hasNoting: null = null;
 // built in objects
 
 let now: Date = new Date();
-console.log(now.toUTCString())
+console.log(now.toUTCString());
+
+// Arrays
+let colors: string[] = ['Blue', 'Green'];
+
+colors.push('Red');
+//colors.push(19); ==> throws error
+
+console.log(colors);
+
+let myNumbers: number[] = [1, 2, 3];
+
+// Classes
+
+class Car {}
+
+let car: Car = new Car();
+
+// Object literals
+let points: {
+  x: number;
+  y: number;
+};
+
+points = {
+  x: 10,
+  y: 20,
+};
+
+// points = {
+//   x: 10,          ==> throws error
+// };
+
+// points = {
+//   x: "199",
+//   y: "45",           ==> throws error
+// };
+
+// Function
+
