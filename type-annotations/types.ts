@@ -62,3 +62,25 @@ points = {
 const logNumbers: (a: number) => void = (a) => console.log(a);
 
 logNumbers(10);
+
+// when tho use annotations
+// 1) Function that returns the 'any' type
+const json = '{"x": 10, "y": 20}';
+const coordinates: { x: number; y: number } = JSON.parse(json);
+console.log(coordinates); // {x: 10, y: 20}
+
+// 2) when we declare a variable on one line and initialize it later
+let colors = ['red', 'green', 'blue'];
+let foundWord: boolean;
+
+for (let x in colors) {
+  if (x == 'green') foundWord = true;
+}
+
+// 3) variable whose type cannot be infered correctly
+let numbers = [-1, -22, 12];
+let numberAboveZero: boolean | number = false;
+
+numbers.forEach((x) => {
+  if (x > 0) numberAboveZero = x;
+});
