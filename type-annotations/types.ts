@@ -70,14 +70,14 @@ const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates); // {x: 10, y: 20}
 
 // 2) when we declare a variable on one line and initialize it later
-let colors = ['red', 'green', 'blue'];
+let color = ['red', 'green', 'blue'];
 let foundWord: boolean;
 
-for (let x in colors) {
+color.forEach((x) => {
   if (x == 'green') foundWord = true;
-}
+});
 
-// 3) variable whose type cannot be infered correctly
+// 3) variable whose type cannot be inferred correctly
 let numbers = [-1, -22, 12];
 let numberAboveZero: boolean | number = false;
 
