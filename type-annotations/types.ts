@@ -59,4 +59,6 @@ points = {
 // };
 
 // Function
+const logNumbers: (a: number) => void = (a) => console.log(a);
 
+logNumbers(10);
